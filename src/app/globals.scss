@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.navbar {
+  @apply fixed list-none flex-col duration-200 ease-in max-[1023px]:left-0 max-[1023px]:top-0 max-[1023px]:h-[100vh] max-[1023px]:w-[350px] max-[1023px]:bg-white max-[1023px]:px-4 max-[1023px]:pt-[25px] lg:static lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center dark:max-[1023px]:bg-theme-dark-bg;
+}
+
+.nav-list-item-link {
+  @apply relative my-2 inline-block whitespace-nowrap px-0 pb-2 text-lg font-light text-theme-primary duration-300 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-theme-secondary after:duration-200 hover:after:w-full lg:mx-[12px] lg:my-0 lg:pb-1 dark:text-theme-dark-primary dark:after:bg-theme-white;
+}
+
+.title-txt {
+  @apply m-0 p-0 py-3 text-[1.55rem] font-bold uppercase tracking-[.02em] text-theme-secondary sm:text-3xl dark:text-white;
+}
+
+.root-btn {
+  @apply rounded-sm border px-8 py-1 text-base transition-all duration-300 hover:bg-theme-btn-secondary hover:text-white;
+}
+
+.active-root-btn {
+  @apply bg-theme-btn-secondary text-white;
+}
+
+.child-btn {
+  @apply rounded-sm border px-3 py-1 text-sm text-black transition-all duration-300 hover:bg-blue-500 hover:text-white;
+}
+
+.active-child-btn {
+  @apply bg-blue-500 text-white;
+}
+
+// after effect with animation
+.after-hover-animation {
+  @apply after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-theme-secondary after:duration-200 hover:after:w-[100%] dark:after:bg-theme-dark-secondary;
+}
+
+.footer-txt-gradient {
+  background-image: linear-gradient(to left, #ec4899, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari and older versions of Chrome */
+  -moz-background-clip: text; /* Firefox (old versions) */
+  -ms-background-clip: text; /* Edge (old versions) */
+  -o-background-clip: text; /* Opera (old versions) */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari and older versions of Chrome */
+  -moz-text-fill-color: transparent; /* Firefox (old versions) */
+  -ms-text-fill-color: transparent; /* Edge (old versions) */
+  -o-text-fill-color: transparent; /* Opera (old versions) */
+}
+
+// footer styles goes here
+.footer-nav-link {
+  @apply relative inline-block px-1 pb-1 text-base text-theme-secondary duration-300 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-theme-secondary after:duration-300 hover:after:w-full lg:text-lg dark:text-theme-dark-secondary dark:after:bg-theme-white;
+}
